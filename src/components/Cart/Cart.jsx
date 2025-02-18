@@ -56,13 +56,13 @@ export default function Cart() {
       <Toaster />
       {
         cartData?.products.length > 0 ?
-         <div className="w-8/12 mx-auto my-5">
+        <div className="w-8/12 mx-auto my-5">
           <div className="bg-gray-200 p-6">
             <h1 className="text-2xl">Shop Cart</h1>
             <div className="flex justify-between">
               <h2>Total Cart Price : <span  className="text-main">{cartData.totalCartPrice}</span></h2>
 
-              <Link to={'/ShippingDetails/'+cartData._id} className="text-center"><button className="bg-blue-700 rounded p-1.5 text-white cursor-pointer">Check Out</button></Link>
+              <Link to={'/ShippingDetails/'+cartData?._id} className="text-center"><button className="bg-blue-700 rounded p-1.5 text-white cursor-pointer">Check Out</button></Link>
             </div>
             <div className="divide-y-2 divide-gray-300">
               {cartData.products.map((item) => {
